@@ -69,7 +69,7 @@ function App() {
   if (hasError) return <>Error found...</>
 
   return (
-    <div id="template-text">
+    <div id="app">
       <h1>Expenses</h1>
       <hr></hr>
       <Table

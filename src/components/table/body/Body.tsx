@@ -16,17 +16,9 @@ export default function Body({ rowData }: IBodyProps) {
     <tbody>
       {rowData.map((data: IRow, i: number) => (
         <tr key={i}>
-          {Object.entries(data).map(([key, value], i: number) =>
-            key === "amount" ? (
-              <td key={i}>
-                £{value}
-              </td>
-            ) : (
-              <td key={i}>
-                {value}
-              </td>
-            )
-          )}
+          {Object.entries(data).map(([key, value], i: number) => (
+            <td key={i}>{key === "amount" ? `£${value}` : value}</td>
+          ))}
         </tr>
       ))}
     </tbody>

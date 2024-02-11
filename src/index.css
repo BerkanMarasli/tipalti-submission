@@ -61,7 +61,7 @@ h6 {
   isolation: isolate;
 }
 
-#template-text {
+#app {
   font-size: 1.2rem;
   font-weight: 400;
   color: #333;
