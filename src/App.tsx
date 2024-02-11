@@ -18,7 +18,7 @@ const EXPENSES_TABLE_COLUMN_TITLES = [
   "Category",
   "Description",
   "Status",
-] // TODO can extract from interface or from data returned by API 
+] // TODO can extract from interface or from data returned by API
 
 function App() {
   const [expenses, setExpenses] = useState<IExpense[]>([])
@@ -68,6 +68,13 @@ function App() {
 
   if (hasError) return <>Error found...</>
 
+  /*
+  Note that I filtered id out here as it is not displayed in the UI.
+  Considering the responsibility of the Table component, it should only receive data to be displayed.
+
+  If I had coded this task differently, I could use the id as a key too.
+  As the API is always returning the same data in this situation (+ no table filtering), using the index as a key is justifiable here.
+  */
   return (
     <div id="app">
       <h1>Expenses</h1>
